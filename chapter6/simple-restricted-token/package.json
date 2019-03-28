@@ -1,0 +1,34 @@
+{
+  "name": "@tokensoft/simple-restricted-token-standard",
+  "version": "0.0.0",
+  "description": "ERC-1404 is an easily extendable standard for issuing tokens with transfer restrictions.",
+  "scripts": {
+    "test": "truffle test",
+    "test:watch": "nodemon --exec \"npm run test\"",
+    "compile": "truffle compile",
+    "migrate": "truffle migrate",
+    "dev": "lite-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tokensoft/simple-restricted-token-standard.git"
+  },
+  "author": "TokenSoft Inc",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tokensoft/simple-restricted-token-standard/issues"
+  },
+  "homepage": "https://github.com/tokensoft/simple-restricted-token-standard#readme",
+  "devDependencies": {
+    "bignumber.js": "^7.2.1",
+    "chai": "^4.1.2",
+    "hex2ascii": "^0.0.3",
+    "mocha": "^5.2.0",
+    "nodemon": "^1.18.3"
+  },
+  "dependencies": {
+    "lite-server": "^2.4.0",
+    "truffle": "^4.1.13",
+    "zeppelin-solidity": "^1.11.0"
+  }
+}

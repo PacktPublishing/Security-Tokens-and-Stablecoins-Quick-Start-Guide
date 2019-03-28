@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>ERC1404 Token Example</title>
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-8 col-sm-push-2">
+              <h1 class="text-center">ERC1404 Security Token</h1>
+              <hr/>
+              <br/>
+            </div>
+        </div>
+        <div id="success-msg" class="row text-center alert alert-success"></div>
+        <div id="error-msg" class="row text-center alert alert-danger"> </div>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="row">
+                    <ul class="nav nav-tabs" id="menuTabs">
+                        <li class="active"><a data-toggle="tab" href="#transfer">transfer</a></li>
+                        <li><a data-toggle="tab" href="#restriction">restriction</a></li>
+                        <li><a data-toggle="tab" href="#messageForTransferRestriction">message</a></li>
+                        <li><a data-toggle="tab" href="#addAddressToWhitelist">addWhitelist</a></li>
+                        <li><a data-toggle="tab" href="#verifyWhitelist">verifyWhitelist</a></li>
+                      </ul>
+                      <div class="tab-content">
+                        <div id="transfer" class="tab-pane fade in active">
+                            <div class="panel-body">
+                                <div class="row">
+                                    <div class="col-lg-12">
+                                        <form id="fund-form" method="post" role="form" style="display: block;">
+                                          <div class="form-group row">
+                                              <div class="row">
+                                                  <div class="col-lg-12">
+                                                      <input type="range" name="amtInputName" id="amtInputId" value="0" min="1" max="100" oninput="amtOutputId.value = amtInputId.value">
+                                                      <div style="display: inline;"><output name="amtOutputName" id="amtOutputId">0</output> <span>ether</span></div>
+                                                  </div>
+                                                </div>
+                                          </div>
+                                          <div class="form-group row">
+                                              <div class="col-lg-12">
+                                                  <label for="transferTo">To:</label>
+                                                  <input type="text" class="form-control" name="transferTo" id="transferTo" value="">
+                                              </div>
+                                          </div>
+                                          <div class="form-group">
+                                            <div class="row">
+                                              <div class="col-lg-12">
+                                                  <button type="button" id="transferToBtn" class="btn btn-success pull-left">Transfer</button>
+                                              </div>
+                                            </div>
+                                          </div>                               
+                                      </form>
+                                  </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="restriction" class="tab-pane fade">
+                            <div class="panel-body">
+                                <div class="row">
+                                    <div class="col-lg-12">
+                                        <form id="fund-form" method="post" role="form" style="display: block;">
+                                          <div class="form-group row">
+                                              <div class="row">
+                                                  <div class="col-lg-12">
+                                                      <input type="range" name="amtInputTransferRestriction" id="amtInputTransferRestriction" value="0" min="1" max="100" oninput="amtOutputTransferRestriction.value = amtInputTransferRestriction.value">
+                                                      <div style="display: inline;"><output name="amtOutputTransferRestriction" id="amtOutputTransferRestriction">0</output> <span>ether</span></div>
+                                                  </div>
+                                                </div>
+                                          </div>
+                                          <div class="form-group row">
+                                              <div class="col-lg-12">
+                                                  <label for="transferTo">To:</label>
+                                                  <input type="text" class="form-control" name="recipient" id="recipient" value="">
+                                              </div>
+                                          </div>
+                                          <div class="form-group">
+                                            <div class="row">
+                                              <div class="col-lg-12">
+                                                  <button type="button" id="detectBtn" class="btn btn-success pull-left">detectTransferRestriction</button>
+                                              </div>
+                                            </div>
+                                          </div>                               
+                                      </form>
+                                  </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="messageForTransferRestriction" class="tab-pane fade">
+                            <div class="panel-body">
+                                <div class="row">
+                                    <div class="col-lg-12">
+                                        <form id="fund-form" method="post" role="form" style="display: block;">
+                                          <div id="restrictionMsg" class="form-group row ">
+       
+                                          </div>
+                                          <div class="form-group">
+                                            <div class="row">
+                                              <div class="col-lg-12">
+                                                  <button type="button" id="loadMessage" class="btn btn-success pull-left">messageForTransferRestriction</button>
+                                              </div>
+                                            </div>
+                                          </div>                               
+                                      </form>
+                                  </div>
+                                </div>
+                            </div>
+                        </div>                                          
+                        <div id="addAddressToWhitelist" class="tab-pane fade">
+                            <div class="panel-body">
+                                <div class="row">
+                                    <div class="col-lg-12">
+                                        <form id="fund-form" method="post" role="form" style="display: block;">
+                                          <div class="form-group row">
+                                              <div class="form-group row">
+                                                  <div class="col-lg-12">
+                                                      <label for="addWhiteListAddress">Add To White List</label>
+                                                      <input type="text" class="form-control" name="addWhiteListAddress" id="addWhiteListAddress" value="">
+                                                  </div>
+                                              </div>
+                                                <div class="row">
+                                                  <div class="col-lg-12">
+                                                    <span><button type="button" id="addWhiteListBtn" class="btn btn-sm btn-success">Submit</button></span>       
+                                                  </div>
+                                                </div>
+                                          </div>                              
+                                      </form>
+                                  </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="verifyWhitelist" class="tab-pane fade">
+                            <div class="panel-body">
+                                <div class="row">
+                                    <div class="col-lg-12">
+                                        <form id="fund-form" method="post" role="form" style="display: block;">
+                                          <div class="form-group row">
+                                              <div class="form-group row">
+                                                  <div class="col-lg-12">
+                                                      <label for="inputWhiteListAddress">Verify White List</label>
+                                                      <input type="text" class="form-control" name="inputWhiteListAddress" id="inputWhiteListAddress" value="">
+                                                  </div>
+                                              </div>
+                                                <div class="row">
+                                                  <div class="col-lg-12">
+                                                    <span><button type="button" id="verifyWhiteListBtn" class="btn btn-sm btn-success">Verify</button></span>       
+                                                  </div>
+                                                </div>
+                                          </div>                              
+                                      </form>
+                                  </div>
+                                </div>
+                            </div>
+                        </div>
+                      </div>
+                  </div>
+  
+            </div>
+            <div class="col-md-6">
+                <div class="form-group  mb-2">
+                    <label for="exampleFormControlSelect1">ERC 1404 Token</label>
+                    <div class="input-group">
+                        <span class="input-group-addon"><a class="copy" data-clipboard-target="#accts"><img class="clippy" src="images/clippy.svg" width="13" alt="Copy to clipboard"></a></span>
+                        <select class="form-control" id="accts">
+                          </select>
+                      </div>
+                  </div>           
+                  <table class="table table-hover table-striped">
+                      <tbody>
+                        <tr>
+                          <th scope="row">Owner Address</th>
+                          <td><span class="text-info" id="address"></span></td>
+                        </tr>
+                        <tr>
+                          <th scope="row">name</th>
+                          <td><span class="text-info" id="name"></span></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">symbol</th>
+                            <td><span class="text-info" id="symbol"></span></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">totalSupply</th>
+                            <td><span class="text-info" id="totalSupply"></span></td>
+                        </tr>                                                                                 
+                      </tbody>
+                    </table>
+            </div>
+          <div class="clearfix"></div>
+      
+          <br /><br />
+        </div>
+    </div>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/web3.min.js"></script>
+    <script src="js/truffle-contract.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>
