@@ -58,10 +58,10 @@ App = {
   render: function() {
     var crowdFundingInstance;
     // Load account data
-    var i =0; 
+    var i =0;
     $('#accts').empty();
     web3.eth.accounts.forEach( function(e){
-        $('#accts').append($('<option>', { 
+        $('#accts').append($('<option>', {
             value:e,
             text : e
         }));
@@ -108,7 +108,7 @@ App = {
         return newInstance.balanceOf(recipient);
       }).then(function(recipientValue) {
         $("#success-msg").html(message+ "<br/> ERC1404 recipient amount (after): " +web3.fromWei(recipientValue, "ether") + " ether"  ).show();
-        
+
       });
     }).catch(function(err) {
       console.error(err);
@@ -133,7 +133,7 @@ App = {
         } else {
           $("#error-msg").html("ERC1404 Message: " + message ).show();
         }
-        
+
       });
 
     }).catch(function(err) {
@@ -181,9 +181,9 @@ App = {
       return instance.whitelist(operator, { gas:3500000});
     }).then(function(result) {
       if(result) {
-        $("#success-msg").html("The Adreess: " + operator + " is in white List").show();
+        $("#success-msg").html("The Address: " + operator + " is in white List").show();
       } else {
-        $("#error-msg").html("The Adreess: " + operator + " is not in white List").show();
+        $("#error-msg").html("The Address: " + operator + " is not in white List").show();
       }
 
     }).catch(function(err) {
