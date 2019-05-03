@@ -1,8 +1,8 @@
 # Security Tokens and Stablecoins Quick Start Guide
 
-<a href="Packt UTM URL of the Book"><img src="Cover Image URL of the Book" alt="Book Name" height="256px" align="right"></a>
+<a href="https://www2.packtpub.com/big-data-and-business-intelligence/security-tokens-and-stablecoins-quick-start-guide?utm_source=github&utm_medium=repository"><img src="https://d255esdrn735hr.cloudfront.net/sites/default/files/imagecache/ppv4_main_book_cover/9781838551063_cover.png" alt="Book Name" height="256px" align="right"></a>
 
-This is the code repository for [Security Tokens and Stablecoins Quick Start Guide](Packt UTM URL of the Book), published by Packt.
+This is the code repository for [Security Tokens and Stablecoins Quick Start Guide](https://www2.packtpub.com/big-data-and-business-intelligence/security-tokens-and-stablecoins-quick-start-guide?utm_source=github&utm_medium=repository), published by Packt.
 
 **Learn how to build STO and stablecoin decentralized applications**
 
