@@ -9,7 +9,7 @@ This is the code repository for [Security Tokens and Stablecoins Quick Start Gui
 ## What is this book about?
 The failure of initial coin offerings (ICOs) is no accident, as most ICOs do not link to a real asset and are not regulated. Realizing the shortcomings of ICOs, the blockchain community and potential investors embraced security token offerings (STOs) and stablecoins enthusiastically.
 
-This book covers the following exciting features: <First 5 What you'll learn points>
+This book covers the following exciting features: 
 * Understand the basic requirements for launching a security token offering
 * Explore various US securities laws governing the offering of security digital tokens
 * Get to grips with the stablecoin concept with the help of use cases
@@ -52,7 +52,7 @@ We also provide a PDF file that has color images of the screenshots/diagrams use
 
 * Mastering Blockchain - Second Edition [[Packt]](https://prod.packtpub.com/in/big-data-and-business-intelligence/mastering-blockchain-second-edition?utm_source=github&utm_medium=repository&utm_campaign=9781785280009) [[Amazon]](https://www.amazon.com/dp/1789807972)
 
-## Get to Know the Author(s)
+## Get to Know the Author
 **Weimin Sun**
 Weimin Sun has 20 years' of experience working in the financial industry. He has worked for top-tier investment and commercial banks such as J.P. Morgan, Bank of America, Citibank, and Morgan Stanley, where he also managed large teams for developing IT applications. Weimin has also held corporate titles such as executive director and senior VP in some of these firms. Weimin has in-depth knowledge of the blockchain technology, data science, data architecture, data modeling, and big data platforms. He holds Ph.D, M.B.A and M.Sc degrees. He has co-authored Blockchain Quick Start Guide and published several statistical journal papers.
 
