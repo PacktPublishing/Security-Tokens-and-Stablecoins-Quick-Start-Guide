@@ -1,3 +1,8 @@
+## $5 Tech Unlocked 2021!
+[Buy and download this Book for only $5 on PacktPub.com](https://www.packtpub.com/product/security-tokens-and-stablecoins-quick-start-guide/9781838551063)
+-----
+*If you have read this book, please leave a review on [Amazon.com](https://www.amazon.com/gp/product/1838551069).     Potential readers can then use your unbiased opinion to help them make purchase decisions. Thank you. The $5 campaign         runs from __December 15th 2020__ to __January 13th 2021.__*
+
 # Security Tokens and Stablecoins Quick Start Guide
 
 <a href="https://www2.packtpub.com/big-data-and-business-intelligence/security-tokens-and-stablecoins-quick-start-guide?utm_source=github&utm_medium=repository"><img src="https://d255esdrn735hr.cloudfront.net/sites/default/files/imagecache/ppv4_main_book_cover/9781838551063_cover.png" alt="Book Name" height="256px" align="right"></a>
