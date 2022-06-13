@@ -1,7 +1,3 @@
-## [Get this title for $10 on Packt's Spring Sale](https://www.packt.com/B13581?utm_source=github&utm_medium=packt-github-repo&utm_campaign=spring_10_dollar_2022)
------
-For a limited period, all eBooks and Videos are only $10. All the practical content you need \- by developers, for developers
-
 # Security Tokens and Stablecoins Quick Start Guide
 
 <a href="https://www2.packtpub.com/big-data-and-business-intelligence/security-tokens-and-stablecoins-quick-start-guide?utm_source=github&utm_medium=repository"><img src="https://d255esdrn735hr.cloudfront.net/sites/default/files/imagecache/ppv4_main_book_cover/9781838551063_cover.png" alt="Book Name" height="256px" align="right"></a>
