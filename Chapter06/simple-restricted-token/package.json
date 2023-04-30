@@ -28,7 +28,7 @@
   },
   "dependencies": {
     "lite-server": "^2.4.0",
-    "truffle": "^4.1.13",
+    "truffle": "^5.8.4",
     "zeppelin-solidity": "^1.11.0"
   }
 }
